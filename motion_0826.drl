@@ -1,0 +1,24 @@
+## Title : motion_0826
+## Time : 2026-08-26 10:54:24
+
+
+set_singular_handling(DR_AVOID)
+set_velj(60.0)
+set_accj(100.0)
+set_velx(250.0, 80.625, DR_OFF)
+set_accx(1000.0, 322.5)
+gLoop105424971 = 0
+while gLoop105424971 < 1:
+    # MoveLNode
+    movel(posx(397.89, -131.04, 115.29, 0.07, -143.31, 1.13), radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(posx(372.65, -135.49, 111.35, 139.60, -172.41, 144.08), radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(posx(460.09, -128.69, 151.54, 172.38, -172.30, 175.16), radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(posx(377.01, -117.32, 128.67, 164.40, -147.78, 167.88), radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(posx(377.01, -117.32, 207.43, 168.80, -132.45, 173.55), radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    # MoveLNode
+    movel(posx(513.80, -117.32, 262.25, 171.16, -111.03, 177.98), radius=0.00, ref=0, mod=DR_MV_MOD_ABS, ra=DR_MV_RA_DUPLICATE, app_type=DR_MV_APP_NONE)
+    gLoop105424971 = gLoop105424971 + 1
