@@ -59,6 +59,28 @@ HOME
 
 ---
 
+## 이 저장소의 위치 — 개발 과정판입니다
+
+여기 있는 스크립트는 **DART Platform 에서 모션을 잡아 가던 개발 과정판(v1~v7)** 입니다.
+**최종 시연에 올라간 것은 팀 저장소의 ROS 2 패키지**
+[`icecream_pj`](https://github.com/tnduaehowl12/roskin-robbins/tree/main/src/icecream_pj)
+이고, 거기서 임계값이 다시 조정됐습니다.
+
+| | 이 저장소 `scoop_sphere_v7.py` | 최종 `icecream_pj/motion_config.py` |
+|---|---|---|
+| 하강 간격 | `PROBE_STEP = 2.0` (2 mm) | `ENTRY_Z_STEP = 1.0` (**1 mm**) |
+| 접촉 판정 (Δ) | `F_ENTRY_DELTA = 2.0` | `F_ENTRY_DELTA = 1.3` |
+| 중간 하드리밋 (Δ) | 없음 | `F_ENTRY_HARD_LIMIT_DELTA = 15.0` |
+| 비상정지 | `F_HARD_DELTA = 12.0` — **변화량** 기준 | `F_EMERGENCY_LIMIT = 40.0` — **절대값** 기준 (`abs(Fx/Fy/Fz)`) |
+| 연속 충족 | `CONSEC_HIT_NEEDED = 2` | `ENTRY_CONSEC_HIT_NEEDED = 2` |
+
+**포트폴리오와 발표자료의 수치(1.3 / 15 / 40 N · 1 mm)는 최종판 기준입니다.**
+여기 있는 값은 그 전 단계의 것이니, 둘이 다르다고 어느 한쪽이 틀린 것은 아닙니다.
+
+판정 구조 자체도 바뀌었습니다. 최종판은 안전장치가 **셋**입니다 —
+접촉(1.3 N) · 중간 하드리밋(15 N) · 비상정지(40 N 절대값). 앞의 둘은 기준값 대비
+변화량이고, 마지막 하나만 절대값입니다. 이 저장소의 v7 은 변화량 둘뿐입니다.
+
 ## 파일
 
 | 파일 | 내용 |
